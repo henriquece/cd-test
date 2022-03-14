@@ -7,7 +7,7 @@ const server = express()
 server.get('/', (req, res) => {
   console.log('GET /', req.headers, req.ip)
 
-  res.send('GET root 3')
+  res.send('GET root 4')
 })
 
 server.post('/', (req, res) => {
