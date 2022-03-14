@@ -1,0 +1,23 @@
+{
+  "name": "cd-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon cd",
+    "start": "node cd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquece/cd-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriquece/cd-test/issues"
+  },
+  "homepage": "https://github.com/henriquece/cd-test#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
