@@ -15,7 +15,7 @@ server.post('/', (req, res) => {
 
   res.send('POST root')
 
-  execSync("sh ./deploy.sh")
+  execSync("sh ./deploy.sh")  
 })
 
 server.listen(3000, () => {
