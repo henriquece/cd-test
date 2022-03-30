@@ -5,8 +5,6 @@ pipeline {
     stage('build image') {
       steps {
         echo 'Building image...'
-        sh 'apt-get update'
-        sh 'apt-get install docker-ce docker-ce-cli containerd.io'
         sh 'docker build -t cd-test .'
       }
     }
