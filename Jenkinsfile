@@ -5,14 +5,14 @@ pipeline {
     stage('build image') {
       steps {
         echo 'Building image...'
-        sh 'docker build -t cd-test .'
+        sh 'sudo docker build -t cd-test .'
       }
     }
 
     stage('run container') {
       steps {
         echo 'Running container...'
-        sh 'docker run -p 3000:3000 cd-test'
+        sh 'sudo docker run -p 3000:3000 cd-test'
       }
     }
   }
