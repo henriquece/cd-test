@@ -12,7 +12,7 @@ pipeline {
     stage('run container') {
       steps {
         echo 'Running container...'
-        sh 'sudo docker run -p 3000:3000 cd-test'
+        sh 'sudo docker run -d -p 3000:3000 cd-test'
       }
     }
   }
