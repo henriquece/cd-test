@@ -18,15 +18,16 @@ pipeline {
     stage('build image') {
       steps {
         echo 'Building image...'
-        sh 'sudo docker build -t ${IMAGE_NAME} .'
+        sh 'docker build -t ${IMAGE_NAME} .'
       }
     }
 
-    // stage('run container') {
-    //   steps {
-    //     echo 'Running container...'
-    //     sh 'sudo docker run -d -p 3000:3000 cd-test'
-    //   }
-    // }
+    stage('deploy') {
+      steps {
+        echo 'Deploying...'
+        sh 'sed -i -e "s/<IMAGE_NAME_CD_TEST>/${IMAGE_NAME}/" cd-test.yml'
+        sh 'cat cd-test.yml'
+      }
+    }
   }
 }

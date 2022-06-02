@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cd-test
-        image: cd-test5
+        image: <IMAGE_NAME_CD_TEST>
         imagePullPolicy: Never
         ports:
         - containerPort: 80
