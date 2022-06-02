@@ -2,7 +2,7 @@ const http = require('http')
 
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
-    res.write('GET / 2222', 'utf-8')
+    res.write('GET / 2222333', 'utf-8')
   } else if (req.url === '/testt') {
     res.write('GET /testt', 'latin1')
   }
