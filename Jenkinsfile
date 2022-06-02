@@ -27,6 +27,7 @@ pipeline {
         echo 'Deploying...'
         sh 'sed -i -e "s/<IMAGE_NAME_CD_TEST>/${IMAGE_NAME}/" cd-test.yml'
         sh 'cat cd-test.yml'
+        sh 'kubectl apply -f cd-test.yml'
       }
     }
   }
