@@ -1,0 +1,38 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-05-31T23:06:55Z"
+  labels:
+    app: cd-test
+  name: cd-test-deployment
+  namespace: default
+  resourceVersion: "17491"
+  uid: d63526d0-bb28-4507-946d-7d6fa4a5788e
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.43.211.255
+  clusterIPs:
+  - 10.43.211.255
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31088
+    port: 8081
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: cd-test
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 0.0.0.0
+

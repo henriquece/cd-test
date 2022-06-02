@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cd-test-deployment
+  labels:
+    app: cd-test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cd-test
+  template:
+    metadata:
+      labels:
+        app: cd-test
+    spec:
+      containers:
+      - name: cd-test
+        image: cd-test5
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
